@@ -11,7 +11,7 @@ pipeline {
   stages {
     stage('Clean Workspace before run') {
       steps {
-        bat 'del *.*'
+        bat 'del *.* /F /Q'
       }
     }
     stage('Checkout code') {
@@ -31,7 +31,7 @@ pipeline {
     }
     stage('Clean Workspace after run') {
       steps {
-        bat 'del *.*'
+        bat 'del *.* /F /Q'
       }
     }
   }
