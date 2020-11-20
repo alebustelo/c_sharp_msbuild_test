@@ -26,7 +26,7 @@ pipeline {
     }
     stage('Run C# code') {
       steps {
-        bat 'Hellworld.exe'
+        bat 'Helloworld.exe'
       }
     }
     stage('Clean Workspace after run') {
