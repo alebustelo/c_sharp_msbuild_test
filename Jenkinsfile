@@ -1,7 +1,9 @@
 //Declarative
 
 pipeline {
-  agent 'windows'
+  agent {
+    label 'windows'
+  }
   // tools {
   //     jdk 'java-11-openjdk'
   //     maven 'apache-maven-3.6.3'
