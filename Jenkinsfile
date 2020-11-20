@@ -21,12 +21,13 @@ pipeline {
     }
     stage('Build C# code') {
       steps {
-        bat 'csc Helloworld.cs'
+        // bat 'csc helloworld.cs'
+        bat 'msbuild helloworld.csproj -p:AssemblyName=Greetings'
       }
     }
     stage('Run C# code') {
       steps {
-        bat 'Helloworld.exe'
+        bat "Bin\\Greetings.exe"
       }
     }
     stage('Clean Workspace after run') {
